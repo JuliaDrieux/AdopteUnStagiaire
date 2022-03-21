@@ -5,3 +5,20 @@ footer {
 header {
 	background-color: midnightblue;
 }
+
+button {
+
+  width: 193px;
+  height: 40px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 5px;
+  border: 1px solid #797979;
+  background-color: #eda2ba;
+  box-sizing: border-box;
+  font-family: "Arial Normal", "Arial", sans-serif;
+  font-weight: 700;
+  color: #fafafa;
+  text-align: center;
+  line-height: normal;
+
+}
