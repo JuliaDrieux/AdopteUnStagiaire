@@ -1,11 +1,3 @@
-footer {
-	background-color: midnightblue;
-}
-
-header {
-	background-color: midnightblue;
-}
-
 button {
 
   width: 193px;
@@ -22,3 +14,85 @@ button {
   line-height: normal;
 
 }
+
+/* Pour le Footer */
+
+footer {
+  background-color: rgba(23, 40, 63, 0.98);
+}
+
+#image_footer {
+  width: 88px;
+  height: 63px;
+  box-sizing: border-box;
+}
+
+#about_us_footer {
+  width: 79px;
+  height: 23px;
+  box-sizing: border-box;
+  font-family: "Arial Normal", "Arial", sans-serif;
+  color: #fafafa;
+  text-align: left;
+  line-height: normal;
+}
+
+#contact {
+  width: 69px;
+  height: 23px;
+  box-sizing: border-box;
+  font-family: "Arial Normal", "Arial", sans-serif;
+  color: #fafafa;
+  text-align: left;
+  line-height: normal;
+}
+
+#telephone {
+  width: 219px;
+  height: 21px;
+  box-sizing: border-box;
+  font-family: "Arial Normal", "Arial", sans-serif;
+  color: #bdbdbd;
+  text-align: left;
+  line-height: normal;
+}
+
+#email {
+  width: 259px;
+  height: 21px;
+  box-sizing: border-box;
+  font-family: "Arial Normal", "Arial", sans-serif;
+  color: #bdbdbd;
+  text-align: left;
+  line-height: normal;
+}
+
+#fb {
+  width: 14px;
+  height: 28px;
+  padding: 2px 2px 2px 2px;
+  box-sizing: border-box;
+}
+
+#insta {
+  width: 28px;
+  height: 28px;
+  padding: 2px 2px 2px 2px;
+  box-sizing: border-box;
+}
+
+#twitter {
+  width: 34px;
+  height: 28px;
+  padding: 2px 2px 2px 2px;
+  box-sizing: border-box;
+}
+
+#linkedin {
+  width: 28px;
+  height: 28px;
+  padding: 2px 2px 2px 2px;
+  box-sizing: border-box;
+}
+
+/* ----------------------*/
