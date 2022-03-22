@@ -96,3 +96,36 @@ footer {
 }
 
 /* ----------------------*/
+
+/* Pour le Header */
+
+#image_header {
+  width: 17.625rem;
+  height: 2.5625rem;
+  box-sizing: border-box;
+}
+
+#image_poignee {
+  width: 25.5rem;
+  height: 33.75rem;
+  border-radius: 1.0625rem;
+  box-sizing: border-box;
+  box-shadow: 0.3125rem 0.3125rem 0.3125rem 0rem rgba(0, 0, 0, 0.35);
+}
+
+#image_start_now {
+  width: 3.75rem;
+  height: 3.75rem;
+  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
+  border: 0.0625rem solid #eda2ba;
+  box-sizing: border-box;
+  box-shadow: 0.3125rem 0.3125rem 0.3125rem 0rem rgba(0, 0, 0, 0.35);
+}
+
+#image_user {
+  width: 2.5625rem;
+  height: 2.5625rem;
+}
+
+
+/* ----------------------*/
