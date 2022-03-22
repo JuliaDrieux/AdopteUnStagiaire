@@ -1,10 +1,10 @@
 button {
 
-  width: 193px;
-  height: 40px;
-  padding: 2px 2px 2px 2px;
-  border-radius: 5px;
-  border: 1px solid #797979;
+  width: 12.0625rem;
+  height: 2.5rem;
+  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #797979;
   background-color: #eda2ba;
   box-sizing: border-box;
   font-family: "Arial Normal", "Arial", sans-serif;
@@ -22,14 +22,14 @@ footer {
 }
 
 #image_footer {
-  width: 88px;
-  height: 63px;
+  width: 5.5rem;
+  height: 3.9375rem;
   box-sizing: border-box;
 }
 
 #about_us_footer {
-  width: 79px;
-  height: 23px;
+  width: 4.9375rem;
+  height: 1.4375rem;
   box-sizing: border-box;
   font-family: "Arial Normal", "Arial", sans-serif;
   color: #fafafa;
@@ -38,8 +38,8 @@ footer {
 }
 
 #contact {
-  width: 69px;
-  height: 23px;
+  width: 4.3125rem;
+  height: 1.4375rem;
   box-sizing: border-box;
   font-family: "Arial Normal", "Arial", sans-serif;
   color: #fafafa;
@@ -48,8 +48,8 @@ footer {
 }
 
 #telephone {
-  width: 219px;
-  height: 21px;
+  width: 13.6875rem;
+  height: 1.3125rem;
   box-sizing: border-box;
   font-family: "Arial Normal", "Arial", sans-serif;
   color: #bdbdbd;
@@ -58,8 +58,8 @@ footer {
 }
 
 #email {
-  width: 259px;
-  height: 21px;
+  width: 16.1875rem;
+  height: 1.3125rem;
   box-sizing: border-box;
   font-family: "Arial Normal", "Arial", sans-serif;
   color: #bdbdbd;
@@ -68,30 +68,30 @@ footer {
 }
 
 #fb {
-  width: 14px;
-  height: 28px;
-  padding: 2px 2px 2px 2px;
+  width: 0.875rem;
+  height: 1.75rem;
+  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
   box-sizing: border-box;
 }
 
 #insta {
-  width: 28px;
-  height: 28px;
-  padding: 2px 2px 2px 2px;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
   box-sizing: border-box;
 }
 
 #twitter {
-  width: 34px;
-  height: 28px;
-  padding: 2px 2px 2px 2px;
+  width: 2.125rem;
+  height: 1.75rem;
+  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
   box-sizing: border-box;
 }
 
 #linkedin {
-  width: 28px;
-  height: 28px;
-  padding: 2px 2px 2px 2px;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
   box-sizing: border-box;
 }
 
