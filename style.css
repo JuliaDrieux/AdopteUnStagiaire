@@ -14,6 +14,10 @@ a {  /*Tous les liens de la page*/
   text-decoration: none;
 }
 
+q::before, q::after {  /*Toutes les citations de la page*/
+  content: none;
+}
+
 /*-------------------------Header-------------------------*/
 header {
   background-image: url(images/header_background.svg);
@@ -83,7 +87,7 @@ nav .element1:nth-child(6) {
   margin-right: 2.5rem;
 }
 
-nav button {  /*Tous les boutons dans la barre navigation*/
+header nav button {  /*Tous les boutons dans la barre navigation*/
   width: 7rem;
   height: 2.5rem;
   padding: 0.125rem;
@@ -104,24 +108,51 @@ nav button {  /*Tous les boutons dans la barre navigation*/
   flex-direction: row;
 }
 
-.element{
+#slogan .element{
   width: 50%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center;  
+}
+
+#slogan .element:nth-child(1) {
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+#slogan .element1 {
+  width: 8rem;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+#slogan .element:nth-child(3){
+  color: #eda2ba;
+}
+
+header q {
+  font-size: 3rem;
+  font-weight: normal;
 }
 
 header button {
-  width: 7rem;
+  width: 12.0625rem;
   height: 2.5rem;
   padding: 0.125rem;
-  border-color: transparent;
-  background-color: transparent;
-  font-size: 1.25rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #797979;
+  background-color: #eda2ba;
+  font-size: 0.8125rem;
   font-weight: bold;
   color: #fafafa;
   text-align: center;
 }
+
 
 /*-----------------------------------------*/
 
