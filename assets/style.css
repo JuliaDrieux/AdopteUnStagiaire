@@ -1,125 +1,140 @@
-button {
+@font-face {  /*Définition d'une police particulière*/
+  font-family: 'Rubik';
+  src: url('fonts/Rubik-Regular.ttf') format('truetype');  /*Format ".ttf" accepté par tous les navigateurs*/
+}
 
-  width: 12.0625rem;
-  height: 2.5rem;
-  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
-  border-radius: 0.3125rem;
-  border: 0.0625rem solid #797979;
-  background-color: #eda2ba;
+* {  /*Tous les éléments de la page*/
+  margin: 0;
   box-sizing: border-box;
-  font-family: "Arial Normal", "Arial", sans-serif;
-  font-weight: 700;
+  font-family: Rubik, Verdana, "Comic Sans MS", Arial, sans-serif;
+  line-height: normal;
+}
+
+a {  /*Tous les liens de la page*/
+  text-decoration: none;
+}
+
+/*-------------------------Header-------------------------*/
+header {
+  background-image: url(images/header_background.svg);
+  background-size: 100%;
+  background-position: top left;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  padding-bottom: 8rem;
+  margin-bottom: 5rem;
+}
+
+/*-----------------Flexbox nav-----------------*/
+#nav{
+  width: 100%;
+  height: 6.875rem;
+  padding-top: 1,4375rem;
+  padding-bottom: 1,4375rem;
+  padding-left: 2.0625rem;
+  display: flex;
+  flex-direction: row;
+}
+
+nav .element {
+  width: 50%;
+  height: 5.4375rem;
+  display: flex;
+  flex-direction: row;
+}
+
+nav .element:nth-child(2) {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .element1 {
+  width: 7rem;
+  margin-right: 0.6rem;
+  margin-left: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav .element1:nth-child(1) {
+  width: 3.375rem;
+}
+
+nav .element1:nth-child(2) {
+  width: 3.4375rem;
+}
+
+nav .element1:nth-child(3) {
+  width: 6.375rem;
+}
+
+nav .element1:nth-child(4) {
+  width: 6.125rem;
+  margin-right: 2rem;
+}
+
+nav .element1:nth-child(5) {
+  width: 2rem;
+}
+
+nav .element1:nth-child(6) {
+  width: 2.5625rem;
+  margin-right: 2.5rem;
+}
+
+nav button {  /*Tous les boutons dans la barre navigation*/
+  width: 7rem;
+  height: 2.5rem;
+  padding: 0.125rem;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 1.25rem;
+  font-weight: bold;
   color: #fafafa;
   text-align: center;
-  line-height: normal;
-
 }
 
-/* Pour le Footer */
-
-footer {
-  background-color: rgba(23, 40, 63, 0.98);
-}
-
-#image_footer {
-  width: 5.5rem;
-  height: 3.9375rem;
-  box-sizing: border-box;
-}
-
-#about_us_footer {
-  width: 4.9375rem;
-  height: 1.4375rem;
-  box-sizing: border-box;
-  font-family: "Arial Normal", "Arial", sans-serif;
-  color: #fafafa;
-  text-align: left;
-  line-height: normal;
-}
-
-#contact {
-  width: 4.3125rem;
-  height: 1.4375rem;
-  box-sizing: border-box;
-  font-family: "Arial Normal", "Arial", sans-serif;
-  color: #fafafa;
-  text-align: left;
-  line-height: normal;
-}
-
-#telephone {
-  width: 13.6875rem;
-  height: 1.3125rem;
-  box-sizing: border-box;
-  font-family: "Arial Normal", "Arial", sans-serif;
-  color: #bdbdbd;
-  text-align: left;
-  line-height: normal;
-}
-
-#email {
-  width: 16.1875rem;
-  height: 1.3125rem;
-  box-sizing: border-box;
-  font-family: "Arial Normal", "Arial", sans-serif;
-  color: #bdbdbd;
-  text-align: left;
-  line-height: normal;
-}
-
-#fb {
-  width: 0.875rem;
-  height: 1.75rem;
-  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
-  box-sizing: border-box;
-}
-
-#insta {
-  width: 1.75rem;
-  height: 1.75rem;
-  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
-  box-sizing: border-box;
-}
-
-#twitter {
-  width: 2.125rem;
-  height: 1.75rem;
-  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
-  box-sizing: border-box;
-}
-
-#linkedin {
-  width: 1.75rem;
-  height: 1.75rem;
-  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
-  box-sizing: border-box;
-}
-
-/* ----------------------*/
-
-/* Pour le Header */
-
-#image_header {
-  width: 17.625rem;
-  height: 2.5625rem;
-  box-sizing: border-box;
-}
-
-#image_poignee {
-  width: 25.5rem;
+/*-----------------Flexbox slogan-----------------*/
+#slogan {
+  width: 100%;
   height: 33.75rem;
-  border-radius: 1.0625rem;
-  box-sizing: border-box;
-  box-shadow: 0.3125rem 0.3125rem 0.3125rem 0rem rgba(0, 0, 0, 0.35);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
 }
 
-#image_start_now {
-  width: 3.75rem;
-  height: 3.75rem;
-  padding: 0.125rem 0.125rem 0.125rem 0.125rem;
-  border: 0.0625rem solid #eda2ba;
-  box-sizing: border-box;
-  box-shadow: 0.3125rem 0.3125rem 0.3125rem 0rem rgba(0, 0, 0, 0.35);
+.element{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header button {
+  width: 7rem;
+  height: 2.5rem;
+  padding: 0.125rem;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fafafa;
+  text-align: center;
+}
+
+/*-----------------------------------------*/
+
+#image_header_back {
+  width: 93.75rem;
+}
+
+#logo {
+  width: 20rem;
+}
+
+#image_heart {
+  width: 2rem;
 }
 
 #image_user {
@@ -127,5 +142,85 @@ footer {
   height: 2.5625rem;
 }
 
+#image_handshake {
+  width: 25.5rem;
+  height: 33.75rem;
+  border-radius: 1.0625rem;
+}
 
-/* ----------------------*/
+#image_start_now {
+  width: 4.5rem;
+  height: 4.5rem;
+  padding: 0.125rem;
+}
+
+/*-------------------------Main-------------------------*/
+main button {  /*Tous les boutons dans le main*/
+  width: 12.0625rem;
+  height: 2.5rem;
+  padding: 0.125rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #797979;
+  background-color: #eda2ba;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fafafa;
+  text-align: center;
+}
+
+.UP_and_DOWN button {  /*Tous les boutons de classe "UP and DOWN" */
+  width: 6rem;
+}
+
+/*-------------------------Footer-------------------------*/
+
+body footer {  /*Tout le footer dans body*/
+  background-color: rgba(23, 40, 63, 0.98);
+}
+
+#image_footer {
+  width: 5.5rem;
+  height: 3.9375rem;
+}
+
+#about_us_footer {
+  width: 4.9375rem;
+  height: 1.4375rem;
+  color: #fafafa;
+  text-align: left;
+}
+
+#contact {
+  width: 4.3125rem;
+  height: 1.4375rem;
+  color: #fafafa;
+  text-align: left;
+}
+
+#contact_text {
+  height: 1.3125rem;
+  color: #bdbdbd;
+  text-align: left;
+}
+
+#fb {  /*icone facebook*/
+  width: 1rem;
+  height: 1.75rem;
+  padding: 0.125rem;
+}
+
+#insta, #linkedin { /*icone instagram et linkedin*/
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0.125rem;
+}
+
+#twitter {  /*icone twitter*/
+  width: 2.125rem;
+  height: 1.75rem;
+  padding: 0.125rem;
+}
+
+footer a:visited {  /*Tous les liens déjà visités du footer*/
+
+}
