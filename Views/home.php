@@ -12,7 +12,7 @@
 		<meta name="author4" content="HARNIST Guillaume" />
 		<meta name="copyright" content="© CC BY-NC-SA 4.0" />
 
-		<link rel="stylesheet" href="http://api.adopteunstagiaire.com/style.css">
+		<link rel="stylesheet" href="http://cdn.adopteunstagiaire.com/style.css">
 	</head>
 
 
@@ -25,7 +25,7 @@
 				<div id="nav">
 					<div class="element">
 						<a href="adopteunstagiaire.com">
-							<img id="logo" src="../images/logo.png" alt="Logo de Adopte un stagiaire" />
+							<img id="logo" src="http://cdn.adopteunstagiaire.com/images/logo.png" alt="Logo de Adopte un stagiaire" />
 						</a>
 					</div>	
 
@@ -44,12 +44,12 @@
 						</div>
 						<div class="element1">	
 							<a href="adopteunstagiaire.com/myInternships">
-								<img id="image_heart" src="../images/Heart_nav.svg" width="40" alt="Coeur de la wish list" />
+								<img id="image_heart" src="http://cdn.adopteunstagiaire.com/images/Heart_nav.svg" width="40" alt="Coeur de la wish list" />
 							</a>
 						</div>	
 						<div class="element1">
 							<a href="adopteunstagiaire.com/signIn">
-								<img id="image_user" src="../images/WhiteUser.png" width="50" alt="User" />
+								<img id="image_user" src="http://cdn.adopteunstagiaire.com/images/WhiteUser.png" width="50" alt="User" />
 							</a>
 						</div>		
 					</div>
@@ -74,10 +74,10 @@
 				</div>
 
 				<div class="element">
-					<img id="image_handshake" src="../images/Handshake.svg" width="300" alt="Poignée de main" />
+					<img id="image_handshake" src="http://cdn.adopteunstagiaire.com/images/Handshake.svg" width="300" alt="Poignée de main" />
 					<div class="element1">
 						<a href="#pop">
-							<img id="image_start_now" src="../images/Play_button.svg" width="60" alt="Continuer" />
+							<img id="image_start_now" src="http://cdn.adopteunstagiaire.com/images/Play_button.svg" width="60" alt="Continuer" />
 						</a>
 					</div>	
 					<div class="element1">
@@ -129,22 +129,22 @@
 			<a href="adopteunstagiaire.com/joinUs">Join us</a> 
 			By clicking Join us, you indicate that you have read and agree to adopte un stagiaire Privacy Policy. <br><br>
 
-			<img id="image_footer" src="../images/logo_crop.png">
+			<img id="image_footer" src="http://cdn.adopteunstagiaire.com/images/logo_crop.png">
 			<small>
 			« <a href="https://policies.google.com/privacy?hl=fr">Privacy Policy (RGPD)</a> and <a href="https://fr.wikipedia.org/wiki/Cookie_(informatique)">Cookies</a> »
 				« Copyrights 2022 - <strong>Adopte</strong>un<strong>stagiaire</strong>.com - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Legal notices</a> »
 			</small>
 			<a href="https://facebook.com/">
-				<img id="fb" src="../images/Facebook.svg">
+				<img id="fb" src="http://cdn.adopteunstagiaire.com/images/Facebook.svg">
 			</a>
 			<a href="https://www.instagram.com/">
-				<img id="insta" src="../images/Instagram.svg">
+				<img id="insta" src="http://cdn.adopteunstagiaire.com/images/Instagram.svg">
 			</a>
 			<a href="https://twitter.com/">
-				<img id="twitter" src="../images/Twitter.svg">
+				<img id="twitter" src="http://cdn.adopteunstagiaire.com/images/Twitter.svg">
 			</a>
 			<a href="https://linkedin.com/">
-				<img id="linkedin" src="../images/Linkedin.png">
+				<img id="linkedin" src="http://cdn.adopteunstagiaire.com/images/Linkedin.png">
 			</a>
 		</footer>
 	</body>
