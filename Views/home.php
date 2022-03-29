@@ -24,32 +24,32 @@
 			<nav>
 				<div id="nav">
 					<div class="element">
-						<a href="index.html">
-							<img id="logo" src="images/logo.png" alt="Logo de Adopte un stagiaire" />
+						<a href="adopteunstagiaire.com">
+							<img id="logo" src="../images/logo.png" alt="Logo de Adopte un stagiaire" />
 						</a>
 					</div>	
 
 					<div class="element">
 						<div class="element1">
-							<a href="index.html" target="_self"><button>Home</button></a>
+							<a href="adopteunstagiaire.com" target="_self"><button>Home</button></a>
 						</div>
 						<div class="element1">
-							<a href="Offers/Offers.html" target="_self"><button>Offers</button></a>
+							<a href="adopteunstagiaire.com/offers" target="_self"><button>Offers</button></a>
 						</div>	
 						<div class="element1">	
-							<a href="Companies/Companies.html" target="_self"><button>Companies</button></a>
+							<a href="adopteunstagiaire.com/companies" target="_self"><button>Companies</button></a>
 						</div>	
 						<div class="element1">	
-							<a href="MobileApp/MobileApp.html" target="_self"><button>Mobile app</button></a>
+							<a href="adopteunstagiaire.com/mobileApp" target="_self"><button>Mobile app</button></a>
 						</div>
 						<div class="element1">	
-							<a href="MyInternships.html">
-								<img id="image_heart" src="images/Heart_nav.svg" width="40" alt="Coeur de la wish list" />
+							<a href="adopteunstagiaire.com/myInternships">
+								<img id="image_heart" src="../images/Heart_nav.svg" width="40" alt="Coeur de la wish list" />
 							</a>
 						</div>	
 						<div class="element1">
-							<a href="Sign in/SignIn.html">
-								<img id="image_user" src="images/WhiteUser.png" width="50" alt="User" />
+							<a href="adopteunstagiaire.com/signIn">
+								<img id="image_user" src="../images/WhiteUser.png" width="50" alt="User" />
 							</a>
 						</div>		
 					</div>
@@ -69,15 +69,15 @@
 						</p>
 					</div>
 					<div class="element1">
-						<a href="Offers/Offers.html" target="_self"><button>Browse available offers</button></a>
+						<a href="adopteunstagiaire.com/offers" target="_self"><button>Browse available offers</button></a>
 					</div>	
 				</div>
 
 				<div class="element">
-					<img id="image_handshake" src="images/Handshake.svg" width="300" alt="Poignée de main" />
+					<img id="image_handshake" src="../images/Handshake.svg" width="300" alt="Poignée de main" />
 					<div class="element1">
 						<a href="#pop">
-							<img id="image_start_now" src="images/Play_button.svg" width="60" alt="Continuer" />
+							<img id="image_start_now" src="../images/Play_button.svg" width="60" alt="Continuer" />
 						</a>
 					</div>	
 					<div class="element1">
@@ -121,30 +121,30 @@
 		<footer>
 			<span id="bottom"></span>
 			
-			<a id="about_us_footer" href="AboutUs.html"> About us </a><br>
+			<a id="about_us_footer" href="adopteunstagiaire.com/aboutUs"> About us </a><br>
 			<span id="contact">Contact</span><br>
 			<span id="contact_text">+33 6 22 48 74 29 (France)<br>
 			contact@adopteunstagiaire.com<br>
 			Parc des Tanneries, 2 All. des Foulons, 67380 Lingolsheim</span><br>
-			<a href="JoinUs.html">Join us</a> 
+			<a href="adopteunstagiaire.com/joinUs">Join us</a> 
 			By clicking Join us, you indicate that you have read and agree to adopte un stagiaire Privacy Policy. <br><br>
 
-			<img id="image_footer" src="images/logo_crop.png">
+			<img id="image_footer" src="../images/logo_crop.png">
 			<small>
 			« <a href="https://policies.google.com/privacy?hl=fr">Privacy Policy (RGPD)</a> and <a href="https://fr.wikipedia.org/wiki/Cookie_(informatique)">Cookies</a> »
 				« Copyrights 2022 - <strong>Adopte</strong>un<strong>stagiaire</strong>.com - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Legal notices</a> »
 			</small>
 			<a href="https://facebook.com/">
-				<img id="fb" src="images/Facebook.svg">
+				<img id="fb" src="../images/Facebook.svg">
 			</a>
 			<a href="https://www.instagram.com/">
-				<img id="insta" src="images/Instagram.svg">
+				<img id="insta" src="../images/Instagram.svg">
 			</a>
 			<a href="https://twitter.com/">
-				<img id="twitter" src="images/Twitter.svg">
+				<img id="twitter" src="../images/Twitter.svg">
 			</a>
 			<a href="https://linkedin.com/">
-				<img id="linkedin" src="images/Linkedin.png">
+				<img id="linkedin" src="../images/Linkedin.png">
 			</a>
 		</footer>
 	</body>
