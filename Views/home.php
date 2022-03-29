@@ -12,7 +12,7 @@
 		<meta name="author4" content="HARNIST Guillaume" />
 		<meta name="copyright" content="© CC BY-NC-SA 4.0" />
 
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="../assets/style.css">
 	</head>
 
 
