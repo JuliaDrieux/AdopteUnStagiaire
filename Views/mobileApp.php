@@ -17,8 +17,9 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     <link rel="manifest" href="manifest.json">
 </head>
 
-<?php include('header.php');?> 
 <body>
+    <?php include('header.php');?> 
+
     <strong>Mobile App</strong><br><br>
 
     <a>Access all available intership offers wherever you are thank to our mobile application !</a><br><br>
@@ -28,6 +29,8 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     <button type="Download">Download</button>
 
     <img src="http://cdn.adopteunstagiaire.com/images/Smartphone.png">
+
+    <?php include('footer.php');?> 
 </body>
-    <?php include('footer.php');?>  
+ 
 </html>

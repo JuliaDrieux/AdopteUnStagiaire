@@ -16,8 +16,9 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     <link rel="manifest" href="manifest.json">
 </head>
 
-<?php include('header.php');?>
 <body>
+    <?php include('header.php');?>
+
         <strong>My Account</strong>
 
         <img src="Images/Black_User.png">
@@ -49,7 +50,8 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
         </div>
 
         <button type="back_to_home_page">Back to home page</button><br><br>
-</body>
 
     <?php include('footer.php');?>  
+</body>
+
 </html>
