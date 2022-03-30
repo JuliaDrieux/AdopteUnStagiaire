@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?=$title?></title>
+    <link rel="stylesheet" href="http://cdn.adopteunstagiaire.com/style.css">
 </head>
 <body>
     <?php include('header.php');?>
@@ -14,7 +15,7 @@
             <div class="element"><?= $offer['duration'] ?></div>
             <div class="element"><?= $offer['email'] ?></div>
         <?php } ?>
-    </div>
-    <?php include('footer.php');?>  
+    </div>   
 </body>
+    <?php include('footer.php');?>  
 </html>
