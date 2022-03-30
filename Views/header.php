@@ -33,36 +33,4 @@
 					</div>
 				</div>
 			</nav>
-	<!-- ---------------------------------------------- -->
-			<div id="slogan">
-				<div class="element">
-					<div class="element1">
-						<q>
-							The hiring site where<br>students take the power!
-						</q>
-					</div>
-					<div class="element1">
-						<p>
-							Find the internship that best suits your interests and manage all your researche in one place.	
-						</p>
-					</div>
-					<div class="element1">
-						<a href="adopteunstagiaire.com/offers" target="_self"><button>Browse available offers</button></a>
-					</div>	
-				</div>
-
-				<div class="element">
-					<img id="image_handshake" src="http://cdn.adopteunstagiaire.com/images/Handshake.svg" width="300" alt="Poignée de main" />
-					<div class="element1">
-						<a href="#pop">
-							<img id="image_start_now" src="http://cdn.adopteunstagiaire.com/images/Play_button.svg" width="60" alt="Continuer" />
-						</a>
-					</div>	
-					<div class="element1">
-						<p>
-							Start now!
-						</p>
-					</div>	
-				</div>
-			</div>
 		</header>
