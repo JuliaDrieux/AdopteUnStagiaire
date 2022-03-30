@@ -7,12 +7,16 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us - AdopteUnStagiaire</title>
+    <title><?=$title?></title>
+    <link rel="stylesheet" href="http://cdn.adopteunstagiaire.com/style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
     <h1>About us</h1>
     <h3>Find out more about our motivations and what led us to create this platform!</h3>

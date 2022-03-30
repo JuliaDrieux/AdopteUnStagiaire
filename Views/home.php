@@ -20,6 +20,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 		<meta name="copyright" content="© CC BY-NC-SA 4.0" />
 
 		<link rel="stylesheet" href="http://cdn.adopteunstagiaire.com/style.css">
+		<link rel="manifest" href="manifest.json">
 	</head>
 
 

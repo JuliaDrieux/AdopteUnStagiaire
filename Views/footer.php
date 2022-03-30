@@ -8,7 +8,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <footer>
 			<span id="bottom"></span>
 			
-			<a id="about_us_footer" href="adopteunstagiaire.com/aboutUs"> About us </a><br>
+			<a id="about_us_footer" href="http://adopteunstagiaire.com/about"> About us </a><br>
 			<span id="contact">Contact</span><br>
 			<span id="contact_text">+33 6 22 48 74 29 (France)<br>
 			contact@adopteunstagiaire.com<br>
