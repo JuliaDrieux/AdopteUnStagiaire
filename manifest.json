@@ -9,9 +9,15 @@
 "orientation": "portrait-primary",
 "icons": [
 {
-"src": "./assets/imgages/Logo_crop_m.png",
+"src": "./assets/images/Logo_crop_m.png",
 "type": "image/png",
 "sizes": "72x72"
+},
+{
+
+"src": "./assets/images/Logo_crop_m2.png",
+"type": "image/png",
+"sizes": "144x144"
 }
 ]
 }
