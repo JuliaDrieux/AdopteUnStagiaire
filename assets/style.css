@@ -1,6 +1,6 @@
 @font-face {  /*Définition d'une police particulière*/
   font-family: 'Rubik';
-  src: url('http://cdn.adopteunstagiaire.com/Rubik-Regular.ttf') format('truetype');  /*Format ".ttf" accepté par tous les navigateurs*/
+  src: url('http://cdn.adopteunstagiaire.com/fonts/Rubik-Regular.ttf') format('truetype');  /*Format ".ttf" accepté par tous les navigateurs*/
 }
 
 * {  /*Tous les éléments de la page*/
@@ -20,7 +20,7 @@ q::before, q::after {  /*Toutes les citations de la page*/
 
 /*-------------------------Header-------------------------*/
 header {
-  background-image: url(http://cdn.adopteunstagiaire.com/header_background.svg);
+  background-image: url(http://cdn.adopteunstagiaire.com/images/header_background.svg);
   background-size: 100%;
   background-position: top left;
   background-attachment: scroll;
