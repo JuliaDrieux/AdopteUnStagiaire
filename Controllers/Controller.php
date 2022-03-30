@@ -43,6 +43,13 @@ $router->get('/mobileApp', function($request) {
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/mobileApp.php';
 });
 
+//Account
+$router->get('/account', function($request) {
+
+  $title = 'Adopte Un Stagiaire | My Account';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/account.php';
+});
+
 //Get log in page
 $router->get("/login", function($request){
     $title += 'Adopte Un Stagiaire | Login';

@@ -1,3 +1,10 @@
+<?php
+//Block access from file
+if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
+    include_once $_SERVER['DOCUMENT_ROOT'].'/errors/403.html';
+    die();
+}?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -48,7 +55,7 @@
 							</a>
 						</div>	
 						<div class="element1">
-							<a href="adopteunstagiaire.com/signIn">
+							<a href="http://adopteunstagiaire.com/account">
 								<img id="image_user" src="http://cdn.adopteunstagiaire.com/images/WhiteUser.png" width="50" alt="User" />
 							</a>
 						</div>		

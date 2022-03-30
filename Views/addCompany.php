@@ -1,3 +1,10 @@
+<?php
+//Block access from file
+if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
+    include_once $_SERVER['DOCUMENT_ROOT'].'/errors/403.html';
+    die();
+}?>
+
 <strong>Add Company</strong><br><br>
 
 <div>

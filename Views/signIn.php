@@ -1,3 +1,10 @@
+<?php
+//Block access from file
+if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
+    include_once $_SERVER['DOCUMENT_ROOT'].'/errors/403.html';
+    die();
+}?>
+
 <strong>Sign In</strong><br><br>
 
 Find the internship that best suits your interests by selecting among various mission categories.<br><br>

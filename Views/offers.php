@@ -1,3 +1,10 @@
+<?php
+//Block access from file
+if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
+    include_once $_SERVER['DOCUMENT_ROOT'].'/errors/403.html';
+    die();
+}?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +14,9 @@
     <title><?=$title?></title>
     <link rel="stylesheet" href="http://cdn.adopteunstagiaire.com/style.css">
 </head>
-<body>
+
     <?php include('header.php');?>
+<body>
     <h1>offers</h1>
     <div class ="container">
         <?php foreach($offers as $offer){ ?>
