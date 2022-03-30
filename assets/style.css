@@ -1,50 +1,53 @@
 @font-face {  /*Définition d'une police particulière*/
-  font-family: 'Rubik';
-  src: url('http://cdn.adopteunstagiaire.com/fonts/Rubik-Regular.ttf') format('truetype');  /*Format ".ttf" accepté par tous les navigateurs*/
+  font-family: "Rubik";
+  src: url("http://cdn.adopteunstagiaire.com/fonts/Rubik-Regular.ttf") format('truetype');  /*Format ".ttf" accepté par tous les navigateurs*/
+  font-display: auto;
 }
 
 * {  /*Tous les éléments de la page*/
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: Rubik, Verdana, "Comic Sans MS", Arial, sans-serif;
   line-height: normal;
+  flex-direction: row;
 }
 
 a {  /*Tous les liens de la page*/
   text-decoration: none;
 }
 
-q::before, q::after {  /*Toutes les citations de la page*/
+q::before, q::after {  /*Toutes les guillemets des citations de la page*/
   content: none;
 }
 
 /*-------------------------Header-------------------------*/
 header {
   background-image: url(http://cdn.adopteunstagiaire.com/images/header_background.svg);
-  background-size: 100%;
+  background-size: 100% 46.3125rem;
   background-position: top left;
   background-attachment: scroll;
   background-repeat: no-repeat;
-  padding-bottom: 8rem;
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  margin-bottom: 1.25rem;
 }
 
 /*-----------------Flexbox nav-----------------*/
 #nav{
   width: 100%;
-  height: 6.875rem;
+  height: 5.4375rem;
   padding-top: 1,4375rem;
   padding-bottom: 1,4375rem;
   padding-left: 2.0625rem;
   display: flex;
-  flex-direction: row;
 }
 
 nav .element {
   width: 50%;
   height: 5.4375rem;
   display: flex;
-  flex-direction: row;
 }
 
 nav .element:nth-child(2) {
@@ -57,7 +60,6 @@ nav .element1 {
   margin-right: 0.6rem;
   margin-left: 0.6rem;
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
 }
 
@@ -103,44 +105,56 @@ header nav button {  /*Tous les boutons dans la barre navigation*/
 #slogan {
   width: 100%;
   height: 33.75rem;
-  padding-top: 1rem;
+  margin-top: 2.625rem;
   display: flex;
-  flex-direction: row;
 }
 
 #slogan .element{
-  width: 50%;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;  
+  font-weight: normal;
+  color: #fafafa;
+  text-align: left;
+  font-size: 1.25rem;
 }
 
 #slogan .element:nth-child(1) {
+  width: 48.375rem;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
 }
 
-#slogan .element1 {
-  width: 8rem;
-  font-size: 1.25rem;
-  font-weight: normal;
-  color: #fafafa;
+#slogan .element:nth-child(1) .element1 {
+  width: 32.6875rem;
   display: flex;
-  flex-direction: row;
-  text-align: left;
 }
 
-#slogan .element:nth-child(3){
+#slogan .element:nth-child(1) .element1:nth-child(2) {
+  margin-top: 1.375rem;
+  margin-bottom: 2.4375rem;
+}
+
+#slogan .element:nth-child(2) {
+  width: 41.625rem;
   color: #eda2ba;
 }
 
-header q {
+#slogan .element:nth-child(2) .element1:nth-child(1) {
+  width: 25.5rem;
+}
+
+#slogan .element:nth-child(2) .element1:nth-child(2) {
+  width: 4.5rem;
+  margin-top: 0.8125rem;
+  margin-left: 1.5625rem;
+}
+
+header q {  /*Le slogan*/
   font-size: 3rem;
   font-weight: normal;
 }
 
-header button {
+header button {  /*Tous les autres boutons du header*/
   width: 12.0625rem;
   height: 2.5rem;
   padding: 0.125rem;
@@ -155,11 +169,6 @@ header button {
 
 
 /*-----------------------------------------*/
-
-#image_header_back {
-  width: 93.75rem;
-}
-
 #logo {
   width: 20rem;
 }
@@ -176,7 +185,6 @@ header button {
 #image_handshake {
   width: 25.5rem;
   height: 33.75rem;
-  border-radius: 1.0625rem;
 }
 
 #image_start_now {
@@ -204,10 +212,33 @@ main button {  /*Tous les boutons dans le main*/
 }
 
 /*-------------------------Footer-------------------------*/
-
 body footer {  /*Tout le footer dans body*/
   background-color: rgba(23, 40, 63, 0.98);
 }
+
+footer span {
+  color: #fafafa;
+}
+
+#foot {
+  display: flex;
+}
+
+.element {
+  display: flex;
+}
+
+.element1 {
+  display: flex;
+}
+
+.element2 {
+  display: flex;
+}
+
+
+
+
 
 #image_footer {
   width: 5.5rem;
@@ -215,16 +246,11 @@ body footer {  /*Tout le footer dans body*/
 }
 
 #about_us_footer {
-  width: 4.9375rem;
-  height: 1.4375rem;
-  color: #fafafa;
   text-align: left;
 }
 
 #contact {
-  width: 4.3125rem;
-  height: 1.4375rem;
-  color: #fafafa;
+
   text-align: left;
 }
 
@@ -253,5 +279,5 @@ body footer {  /*Tout le footer dans body*/
 }
 
 footer a:visited {  /*Tous les liens déjà visités du footer*/
-
+  color: purple;
 }
