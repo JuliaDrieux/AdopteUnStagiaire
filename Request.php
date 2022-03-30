@@ -5,12 +5,6 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     die();
 }
 
-/**
- * The class that represent the request
- * 
- * @author Thophile
- * @license MIT
- */
 class Request
 {
   /**

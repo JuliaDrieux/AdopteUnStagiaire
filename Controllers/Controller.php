@@ -36,6 +36,13 @@ $router->get('/offers', function($request, $repo) {
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/offers.php';
 });
 
+//Mobile app
+$router->get('/mobileApp', function($request) {
+
+  $title = 'Adopte Un Stagiaire | Mobile App';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/mobileApp.php';
+});
+
 //Get log in page
 $router->get("/login", function($request){
     $title += 'Adopte Un Stagiaire | Login';
