@@ -16,15 +16,18 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     <link rel="manifest" href="manifest.json">
 </head>
 
-    <?php include('header.php');?>
 <body>
+    <?php include('header.php');?>
+    
     <h1>offers</h1>
     <div class ="container">
         <?php foreach($offers as $offer){ ?>
             <div class="element"><?= $offer['duration'] ?></div>
             <div class="element"><?= $offer['email'] ?></div>
         <?php } ?>
-    </div>   
+    </div>  
+    
+    <?php include('footer.php');?>
 </body>
-    <?php include('footer.php');?>  
+  
 </html>
