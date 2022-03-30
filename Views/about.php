@@ -31,7 +31,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     <h2>History</h2>
     <p>At the time, we were four CESI Strasbourg students in our second year of engineering school and had lots of difficulties finding an internship. After countless applications, we luckily found a mission and kept going on with our studies. We have since graduated and decided to create this fabulous website. Inspired by socials and dating apps, the tool we came up with is made to facilitate students to find an internship.</p>
     
-    <a href="..\index.html"><button>← Go to homepage</button></a>
+    <a href="http://adopteunstagiaire.com"><button>← Go to homepage</button></a>
 
     <?php include('footer.php');?>  
 </body>
