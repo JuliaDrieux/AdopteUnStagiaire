@@ -58,8 +58,8 @@ class Repository{
      */
     public function getOffers(){
 
-        $query = "SELECT * FROM ".env('DB_OFFER_TABLE');
- 
+        $query = "SELECT publicationDate, name, salary, duration, category, availablePositions, email FROM ".env('DB_OFFER_TABLE')." JOIN company ON offer.id_Company = company.id";
+
         //Prepare the query
         if($this->conn == null){
             $this->connect();
@@ -79,14 +79,14 @@ class Repository{
     }
 
     /**
-     * Create a new project
+     * Create a new offer
      * 
-     * @param array $project An array that will be saved in database
-     * @return void|int the newly created project id
+     * @param array $offer An array that will be saved in database
+     * @return void|int the newly created offer id
      */
-    public function createArray($array){
+    public function addOffer($offer){
 
-        $query = "INSERT INTO ".$this->project_table." (title, category, banner_image, images, links, article) VALUES (:title, :category, :banner_image, :images, :links, :article)";
+        $query = "INSERT INTO ".env('DB_OFFER_TABLE')." (publicationDate, id_Company, salary, duration, category, availablePositions, email) VALUES (:publicationDate, :id_Company, :salary, :duration, :category, :availablePositions, :email)";
 
         //Prepare the query
         if($this->conn == null){
@@ -96,12 +96,13 @@ class Repository{
         
         //Execute the query, also check if query was successful
         $stmt->execute([
-        'title' => $array['title'],
+        'publicationDate' => $array['publicationDate'],
+        'id_Company' => $array['id_Company'],
+        'salary' => $array['salary'],
+        'duration' => $array['duration'],
         'category' => $array['category'],
-        'banner_image' => $array['banner_image'],
-        'images' => json_encode($array['images']),
-        'links' => json_encode($array['links']),
-        'article' => json_encode($array['article'])
+        'availablePositions' => $array['availablePositions'],
+        'email' => $array['email'],
         ]);
 
         if($stmt->rowCount() <= 0){
@@ -111,7 +112,7 @@ class Repository{
         }
 
         //Return newly created array's id
-        $query = "SELECT id FROM ".$this->table." ORDER BY id DESC LIMIT 1";
+        $query = "SELECT id FROM ".env('DB_OFFER_TABLE')." ORDER BY id DESC LIMIT 1";
 
         if($this->conn == null){
             $this->connect();

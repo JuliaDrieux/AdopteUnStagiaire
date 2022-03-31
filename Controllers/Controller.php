@@ -36,7 +36,7 @@ $router->get('/offers', function($request, $repo) {
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/offers.php';
 });
 
-//Companies
+//Add offer
 $router->get('/addOffer', function($request) {
 
   $title = 'Adopte Un Stagiaire | Add an offer';

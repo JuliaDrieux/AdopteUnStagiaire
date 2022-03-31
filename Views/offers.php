@@ -26,6 +26,8 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     <div class ="container">
         <?php foreach($offers as $offer){ ?>
             <div class="element"><?= $offer['publicationDate'] ?></div>
+            <div class="element"><?= $offer['name'] ?></div>
+            <div class="element"><?= $offer['category'] ?></div>
             <div class="element"><?= $offer['duration'] ?></div>
             <div class="element"><?= $offer['availablePositions'] ?></div>
             <div class="element"><?= $offer['salary'] ?></div>
