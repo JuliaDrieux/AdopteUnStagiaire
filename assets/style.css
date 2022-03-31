@@ -1,8 +1,8 @@
-@font-face {  /*Définition d'une police particulière*/
+/*@font-face {  /*Définition d'une police particulière*/
   /*font-family: "Rubik";*/
   /*src: url("http://cdn.adopteunstagiaire.com/fonts/Rubik-Regular.ttf") format('truetype');*/  /*Format ".ttf" accepté par tous les navigateurs*/
-  font-display: auto;
-}
+  /*font-display: auto;
+}*/
 
 * {  /*Tous les éléments de la page*/
   margin: 0;
@@ -25,12 +25,13 @@ q::before, q::after {  /*Toutes les guillemets des citations de la page*/
 
 /*-------------------------Header-------------------------*/
 header {
+  display: flex;
+  flex-direction: column;
   background-image: url(http://cdn.adopteunstagiaire.com/images/header_background.svg);
   background-size: 100% 46.3125rem;
   background-position: top left;
   background-attachment: scroll;
   background-repeat: no-repeat;
-  padding-bottom: 5rem;
   margin-bottom: 1.25rem;
 }
 
@@ -104,8 +105,9 @@ header nav button {  /*Tous les boutons dans la barre navigation*/
 /*-----------------Flexbox slogan-----------------*/
 #slogan {
   width: 100%;
-  height: 33.75rem;
-  margin-top: 2.625rem;
+  height: 38.75rem;
+
+
   display: flex;
 }
 
