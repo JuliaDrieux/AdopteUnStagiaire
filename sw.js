@@ -3,7 +3,29 @@ const dynamicCache = 'site-dynamic';
 const assets = [
     '/',
     '/index.php',
-    '/scripts/app.js'
+    '/scripts/app.js',
+    '/views/about.php',
+    '/views/account.php',
+    '/views/addcompany.php',
+    '/views/addoffer.php',
+    '/views/addperson.php',
+    '/views/directory.php',
+    '/views/footer.php',
+    '/views/header.php',
+    '/views/home.php',
+    '/views/mobielapp.php',
+    '/views/offers.php',
+    '/views/signin.php',
+    '/model/repository.php',
+    '/errors/400.php',
+    '/errors/403.php',
+    '/errors/404.php',
+    '/errors/405.php',
+    '/errors/500.php',
+    '/controllers/controller.php',
+    '/errors/405.php',
+
+
     
 ];
 //installer le service worker
