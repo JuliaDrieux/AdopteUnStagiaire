@@ -29,7 +29,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 							<a href="http://adopteunstagiaire.com/mobileApp" target="_self"><button>Mobile app</button></a>
 				</div>
 				<div class="element1">	
-					<a href="http://adopteunstagiaire.com/myInternships">
+					<a href="http://adopteunstagiaire.com/wishlist">
 						<img id="image_heart" src="http://cdn.adopteunstagiaire.com/images/Heart_nav.svg" alt="Coeur de la wish list" />
 					</a>
 				</div>	

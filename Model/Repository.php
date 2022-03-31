@@ -214,6 +214,33 @@ class Repository{
 
     }
 
+    public function getWishlist(){
+        
+        $query = "SELECT name, category, publicationDate, duration, availablePositions, salary, email FROM ".env('DB_WISHLIST_TABLE')." JOIN offer ON save.id = offer.id JOIN company ON id_Company = company.id";
+
+       // SELECT name, category, publicationDate, duration, availablePositions, salary, email FROM save 
+        //JOIN offer ON save.id = offer.id
+       // JOIN company ON id_Company = company.id
+ 
+
+        //Prepare the query
+        if($this->conn == null){
+            $this->connect();
+        }
+        $stmt = $this->conn->prepare($query);
+    
+        //Execute the query, also check if query was successful
+        if($stmt->execute()){
+            //Get record
+            $wishlist = $stmt->fetchAll();
+            return $wishlist;
+        }else{
+            http_response_code(400);
+            include($_SERVER['DOCUMENT_ROOT'].'/errors/400.html'); 
+            die();
+        }
+    }
+
     /**
      * Update an existing array
      * 

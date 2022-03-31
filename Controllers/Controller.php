@@ -91,6 +91,14 @@ $router->get('/mobileApp', function($request) {
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/mobileApp.php';
 });
 
+//Wishlist
+$router->get('/wishlist', function($request, $repo) {
+
+  $title = 'Adopte Un Stagiaire | Wishlist';
+  $wishlist = $repo->getWishlist();
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/wishlist.php';
+});
+
 //Account
 $router->get('/account', function($request, $repo, $authenticator) {
   //if user is connected
