@@ -23,7 +23,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 					<a href="http://adopteunstagiaire.com/offers" target="_self"><button>Offers</button></a>
 				</div>	
 				<div class="element1">	
-					<a href="http://adopteunstagiaire.com/addCompany" target="_self"><button>Companies</button></a>
+					<a href="http://adopteunstagiaire.com/companies" target="_self"><button>Companies</button></a>
 				</div>	
 				<div class="element1">	
 							<a href="http://adopteunstagiaire.com/mobileApp" target="_self"><button>Mobile app</button></a>

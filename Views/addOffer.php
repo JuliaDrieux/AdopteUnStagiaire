@@ -21,54 +21,31 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     
         <strong>Add Offer</strong><br><br>
 
+        <form action="/addOffer" method="post">
         <div>
-                <label for="company_name">Company Name</label><br>
-                <input type="texte" id="company" name="company_name">
-        </div><br>
-
-        <div>
-                <label for="promotion_concerned">Promotion Concerned</label><br>
-                <input type="texte" id="promotion_concerned" name="promotion_concerned">
-        </div><br>
-
-        <label for="skills">Skills</label><br>
-        <select name="skills" id="skills">
-        <option value="CSS">CSS</option>
-        <option value="HTML">HTML</option>
-        <option value="Python">Python</option>
-        <option value="C++">C++</option>
-        </select><br><br>
-        <div>
-                <label for="locality">Locality</label><br>
-                <input type="text" id="locality" name="locality">
+            <input placeholder="Company" id="company" name="offer_company">
         </div><br>
         <div>
-                <label for="postcode">Postcode</label><br>
-                <input type="text" id="postcode" name="postcode">
+            <input placeholder="Category" id="category" name="offer_category">
         </div><br>
         <div>
-                <label for="duration">Duration</label><br>
-                <input type="text" id="duration" name="duration">
-        </div><br>
-
-        <div>
-                <label for="start_the">Start the</label><br>
-                <input type="text" id="star_the" name="start_the">
-        </div><br>
-
-        <div>
-                <label for="available_post">Available Post</label><br>
-                <input type="number" id="available_post" name="available_post">
+            <input placeholder="Duration (weeks)" type="number" id="duration" name="offer_duration">
         </div><br>
         <div>
-                <label for="wage">Wage (for an hour)</label><br>
-                <input type="number" id="wage" name="wage">
+            <input placeholder="Salary (€/month)" type="number" id="salary" name="offer_salary">
         </div><br>
-        <button type="register">Register</button><br><br>
         <div>
-                <input type="text" id="research_offer" name="research_offer">
-                <button type="search">Search</button><br><br>
+            <input placeholder="Available positions" id="availablePositions" name="offer_availablePositions">
         </div><br>
+        <div>
+            <input placeholder="Email" type="email" id="email" name="offer_email">
+        </div><br>
+        <?php if(isset($error)) {?>
+            <div><?= $error?></div>
+        <?php } ?>
+        <button type="submit">Create</button>
+    
+    </form>
 
         <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
 

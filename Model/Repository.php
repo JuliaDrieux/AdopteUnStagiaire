@@ -100,6 +100,58 @@ class Repository{
     }
 
     /**
+     * Get companies from database
+     * 
+     * @return void|array An array of all the companies in database
+     */
+    public function getCompanies(){
+        
+        $query = "SELECT name, businessSector, traineesRecruited FROM ".env('DB_COMPANY_TABLE');
+
+        //Prepare the query
+        if($this->conn == null){
+            $this->connect();
+        }
+        $stmt = $this->conn->prepare($query);
+    
+        //Execute the query, also check if query was successful
+        if($stmt->execute()){
+            //Get record
+            $companies = $stmt->fetchAll();
+            return $companies;
+        }else{
+            http_response_code(400);
+            include($_SERVER['DOCUMENT_ROOT'].'/errors/400.html'); 
+            die();
+        }
+    }
+
+    public function addCompany($company){
+
+        $query = "INSERT INTO ".env('DB_COMPANY_TABLE')." (name, businessSector, traineesRecruited) VALUES (:name, :businessSector, :traineesRecruited)";
+
+        //Prepare the query
+        if($this->conn == null){
+            $this->connect();
+        }
+        $stmt = $this->conn->prepare($query);
+        
+        //Execute the query, also check if query was successful
+        $stmt->execute([
+        'name' => $company['company_name'],
+        'businessSector' => $company['company_businessSector'],
+        'traineesRecruited' => $company['company_traineesRecruited'],
+        ]);
+
+        if($stmt->rowCount() <= 0){
+            http_response_code(400);
+            include($_SERVER['DOCUMENT_ROOT'].'/errors/400.html'); 
+            die();
+        }
+
+    }
+
+    /**
      * Get offers from database
      * 
      * @return void|array An array of all the offers in database
@@ -144,13 +196,14 @@ class Repository{
         
         //Execute the query, also check if query was successful
         $stmt->execute([
-        'publicationDate' => $offer['publicationDate'],
-        'id_Company' => $offer['id_Company'],
-        'salary' => $offer['salary'],
-        'duration' => $offer['duration'],
-        'category' => $offer['category'],
-        'availablePositions' => $offer['availablePositions'],
-        'email' => $offer['email'],
+        'id_Company' => 1,
+        /*'id_Company' => $offer['id_Company'],*/
+        'publicationDate' => date("Y-m-d"),
+        'salary' => $offer['offer_salary'],
+        'duration' => $offer['offer_duration'],
+        'category' => $offer['offer_category'],
+        'availablePositions' => $offer['offer_availablePositions'],
+        'email' => $offer['offer_email'],
         ]);
 
         if($stmt->rowCount() <= 0){
@@ -159,16 +212,6 @@ class Repository{
             die();
         }
 
-        //Return newly created array's id
-        $query = "SELECT id FROM ".env('DB_OFFER_TABLE')." ORDER BY id DESC LIMIT 1";
-
-        if($this->conn == null){
-            $this->connect();
-        }
-        $stmt = $this->conn->query($query);
-
-        $id = $stmt->fetch();
-        return $id;
     }
 
     /**

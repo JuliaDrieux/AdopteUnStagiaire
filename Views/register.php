@@ -20,7 +20,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?>
 
-    <strong>Sign In</strong><br><br>
+    <strong>Register</strong><br><br>
 
     Find the internship that best suits your interests by selecting among various mission categories.<br><br>
 

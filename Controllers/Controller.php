@@ -38,16 +38,50 @@ $router->get('/offers', function($request, $repo) {
 
 //Add offer
 $router->get('/addOffer', function($request) {
-
+  
   $title = 'Adopte Un Stagiaire | Add an offer';
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/addOffer.php';
 });
 
-//Companies
-$router->get('/addCompany', function($request) {
+$router->post('/addOffer', function($request, $repo) {
+  
+  $error = $repo->addOffer($request->getBody());
+  if($error){
+    $title = 'Adopte Un Stagiaire | Add an offer';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/views/addOffer.php';
+  }else{
+    //Redirect
+    header("Location: /");
+    die();
+  }
+});
+
+//All companies
+$router->get('/companies', function($request, $repo) {
 
   $title = 'Adopte Un Stagiaire | Companies';
+  $companies = $repo->getCompanies();
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/companies.php';
+});
+
+//Add a company
+$router->get('/addCompany', function($request) {
+
+  $title = 'Adopte Un Stagiaire | Add a company';
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/addCompany.php';
+});
+
+$router->post('/addCompany', function($request, $repo) {
+  
+  $error = $repo->addCompany($request->getBody());
+  if($error){
+    $title = 'Adopte Un Stagiaire | Add a company';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/views/addCompany.php';
+  }else{
+    //Redirect
+    header("Location: /");
+    die();
+  }
 });
 
 //Mobile app
