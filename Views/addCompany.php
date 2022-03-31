@@ -76,7 +76,8 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
                 <button type="search">Search</button><br><br>
         </div><br>
 
-        <button type="back_to_home_page">Back to home page</button><br><br>
+        
+        <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
     
     <?php include('footer.php');?>
 </body>
