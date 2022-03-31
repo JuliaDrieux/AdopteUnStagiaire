@@ -58,32 +58,73 @@ $router->get('/mobileApp', function($request) {
 });
 
 //Account
-$router->get('/account', function($request) {
-
-  $title = 'Adopte Un Stagiaire | My Account';
-  include_once $_SERVER['DOCUMENT_ROOT'].'/views/account.php';
+$router->get('/account', function($request, $repo, $authenticator) {
+  //if user is connected
+  if(isset($_COOKIE["token"])){
+    $user = $authenticator->validateToken($_COOKIE["token"]);
+  }
+  if($user){
+    $title = 'Adopte Un Stagiaire | My Account';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/views/account.php';
+  } else {
+    //redirect to signin route
+    header('Location: signin');
+  }
 });
 
 //Get log in page
-$router->get("/login", function($request){
-    $title += 'Adopte Un Stagiaire | Login';
-    include_once $_SERVER['DOCUMENT_ROOT'].'/views/login.php';
-  });
+$router->get("/signout", function($request){
+  if(isset($_COOKIE['token'])){
+    unset($_COOKIE['token']);
+    setcookie('token', null, -1, '/');
+  }
+  //Redirect
+  header("Location: /");
+  die();
+});
+
+//Get log in page
+$router->get("/signin", function($request){
+  $title = 'Adopte Un Stagiaire | Sign In';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/signIn.php';
+});
 
 //Login handler
-$router->post('/login', function($request, $repo, $auth) {
-    //Password check
-    if($auth->tryLogin($request->getBody()['uid'], $request->getBody()['password'])){
-  
-      //Setting token in cookies, will expire with session
-      setcookie('token', $auth->generateToken(), 0);
-  
-      //Redirect
-      //header("Location: http://{$request->httpHost}/admin");
-      die();
-  
-    }else{
-      $error="Wrong credentials";
-      include_once $_SERVER['DOCUMENT_ROOT'].'/views/login.php';
-    }
-  });
+$router->post('/signin', function($request, $repo, $authenticator) {
+  //Password check
+  if($authenticator->signIn($request->getBody()['user_mail'], $request->getBody()['user_password'])){
+
+    //Setting token in cookies, will expire with session
+    setcookie('token', $authenticator->generateToken($request->getBody()['user_mail']), 0);
+
+    //Redirect
+    header("Location: /");
+    die();
+
+  }else{
+    $error="Wrong credentials";
+    include_once $_SERVER['DOCUMENT_ROOT'].'/views/signIn.php';
+  }
+});
+
+//Get the register page
+$router->get("/register", function($request){
+  $title = 'Adopte Un Stagiaire | Register';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/register.php';
+});
+
+//Get the register page
+$router->post("/register", function($request, $repo, $authenticator){
+  $error = $authenticator->register($request->getBody());
+  if(!$error){
+
+    //Setting token in cookies, will expire with session
+    setcookie('token', $authenticator->generateToken($request->getBody()['user_mail']), 0);
+
+    //Redirect
+    header("Location: /");
+    die();
+  }else{
+    include_once $_SERVER['DOCUMENT_ROOT'].'/views/register.php';
+  }
+});

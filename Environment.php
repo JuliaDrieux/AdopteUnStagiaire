@@ -25,6 +25,7 @@ $variables = [
     'DB_WISHLIST_TABLE' => 'save',
     'DB_SETTLE_TABLE' => 'settle',
     'DB_USER_TABLE' => 'user',
+    'APP_KEY' => 'A0VPlYdsFwI9XoQW5Kan',
 ];
 
 //Set the env variable

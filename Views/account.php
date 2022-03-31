@@ -22,34 +22,28 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 
         <strong>My Account</strong>
 
-        <img src="Images/Black_User.png">
+        <img id="image_user_account" src="http://cdn.adopteunstagiaire.com/images/BlackUser.png">
 
         <div>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email_modify">
-                <button type="modify">Modify</button>
+            <?=$user["name"]?> <?=$user["surname"]?><br>
+            Campus : <?=$user["campus"]?><br>
+            Email : <?=$user["email"]?><br>
         </div>
+
         <div>
-                <label for="password">Password</label>
-                <input type="text" id="password" name="password_modify">
-                <button type="modify">Modify</button>
+            <strong>Stats :</strong><br>
+            <span>Number of applications :</span><br>
+            <span>Date of last application :</span><br><br>
+            <span>Number of rejections :</span><br>
+            <span>Number of pending :</span><br>
+            <span>Number of pending with favorable responses :</span><br><br>
+            <strong>Favorite category :</strong><br>
+            1)<br>
+            2)<br>
+            3)<br>
         </div>
-        <div>
-        <strong>Stats :</strong><br>
-        <span>Number of applications :</span><br>
-        <span>Date of last application :</span><br><br>
-        <span>Number of rejections :</span><br>
-        <span>Number of pending :</span><br>
-        <span>Number of pending with favorable responses :</span><br><br>
-        <strong>Favorite category :</strong><br>
-        1)<br>
-        2)<br>
-        3)<br>
-
-
-
-        </div>
-
+        
+        <a href="http://adopteunstagiaire.com/signout"><button>Sign out</button></a>
         <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
 
     <?php include('footer.php');?>  

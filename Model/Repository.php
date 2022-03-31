@@ -51,13 +51,61 @@ class Repository{
         }
     }
 
+    public function createUser($user){
+
+        if($this->getUser($user["user_mail"])){
+            return "Email taken";
+        }
+
+        $query = "INSERT INTO ".env('DB_USER_TABLE')." (name, surname, campus, email, password) VALUES (:name, :surname, :campus, :email, :password)";
+
+        //Prepare the query
+        if($this->conn == null){
+            $this->connect();
+        }
+        $stmt = $this->conn->prepare($query);
+        
+        //Execute the query, also check if query was successful
+        $stmt->execute([
+        'name' => $user['user_name'],
+        'surname' => $user['user_surname'],
+        'campus' => $user['user_campus'],
+        'email' => $user['user_mail'],
+        'password' => password_hash($user['user_password'], PASSWORD_DEFAULT),
+        ]);
+
+        if($stmt->rowCount() <= 0){
+            http_response_code(400);
+            include($_SERVER['DOCUMENT_ROOT'].'/errors/400.html'); 
+            die();
+        }
+    }
+
+    public function getUser($email){
+        $query = "SELECT * FROM ".env('DB_USER_TABLE')." WHERE email = :email";
+        //Prepare the query
+        if($this->conn == null){
+            $this->connect();
+        }
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute(['email' => $email]);
+
+        if($stmt->rowCount() > 0){
+            $user = $stmt->fetch();
+            return $user;
+        }else {
+            return false;
+        }
+
+    }
+
     /**
      * Get offers from database
      * 
      * @return void|array An array of all the offers in database
      */
     public function getOffers(){
-
+        
         $query = "SELECT publicationDate, name, salary, duration, category, availablePositions, email FROM ".env('DB_OFFER_TABLE')." JOIN company ON offer.id_Company = company.id";
 
         //Prepare the query
@@ -96,13 +144,13 @@ class Repository{
         
         //Execute the query, also check if query was successful
         $stmt->execute([
-        'publicationDate' => $array['publicationDate'],
-        'id_Company' => $array['id_Company'],
-        'salary' => $array['salary'],
-        'duration' => $array['duration'],
-        'category' => $array['category'],
-        'availablePositions' => $array['availablePositions'],
-        'email' => $array['email'],
+        'publicationDate' => $offer['publicationDate'],
+        'id_Company' => $offer['id_Company'],
+        'salary' => $offer['salary'],
+        'duration' => $offer['duration'],
+        'category' => $offer['category'],
+        'availablePositions' => $offer['availablePositions'],
+        'email' => $offer['email'],
         ]);
 
         if($stmt->rowCount() <= 0){
