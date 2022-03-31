@@ -21,6 +21,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 
 		<link rel="stylesheet" href="http://cdn.adopteunstagiaire.com/style.css">
 		<link rel="manifest" href="manifest.json">
+		<script src="/scripts/app.js"></script>
 	</head>
 
 
