@@ -1,6 +1,6 @@
 @font-face {  /*Définition d'une police particulière*/
-  font-family: "Rubik";
-  src: url("http://cdn.adopteunstagiaire.com/fonts/Rubik-Regular.ttf") format('truetype');  /*Format ".ttf" accepté par tous les navigateurs*/
+  /*font-family: "Rubik";*/
+  /*src: url("http://cdn.adopteunstagiaire.com/fonts/Rubik-Regular.ttf") format('truetype');*/  /*Format ".ttf" accepté par tous les navigateurs*/
   font-display: auto;
 }
 
@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: Rubik, Verdana, "Comic Sans MS", Arial, sans-serif;
+  font-family: /*Rubik,*/ Verdana, "Comic Sans MS", Arial, sans-serif;
   line-height: normal;
   flex-direction: row;
 }
