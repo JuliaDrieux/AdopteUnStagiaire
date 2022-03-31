@@ -68,12 +68,12 @@ $router->get('/account', function($request, $repo, $authenticator) {
     include_once $_SERVER['DOCUMENT_ROOT'].'/views/account.php';
   } else {
     //redirect to signin route
-    header('Location: signin');
+    header('Location: signIn');
   }
 });
 
 //Get log in page
-$router->get("/signout", function($request){
+$router->get("/signOut", function($request){
   if(isset($_COOKIE['token'])){
     unset($_COOKIE['token']);
     setcookie('token', null, -1, '/');
@@ -84,13 +84,13 @@ $router->get("/signout", function($request){
 });
 
 //Get log in page
-$router->get("/signin", function($request){
+$router->get("/signIn", function($request){
   $title = 'Adopte Un Stagiaire | Sign In';
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/signIn.php';
 });
 
 //Login handler
-$router->post('/signin', function($request, $repo, $authenticator) {
+$router->post('/signIn', function($request, $repo, $authenticator) {
   //Password check
   if($authenticator->signIn($request->getBody()['user_mail'], $request->getBody()['user_password'])){
 
@@ -102,6 +102,7 @@ $router->post('/signin', function($request, $repo, $authenticator) {
     die();
 
   }else{
+    $title = 'Adopte Un Stagiaire | Sign In';
     $error="Wrong credentials";
     include_once $_SERVER['DOCUMENT_ROOT'].'/views/signIn.php';
   }
