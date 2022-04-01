@@ -20,8 +20,12 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?> 
 
-    <strong>My reviews</strong><br><br>
-
+    <main id="Omain">
+        <div id="main">
+        <h2>My reviews</h2>
+            
+        </div>
+    </main>
 
     <?php include('footer.php');?> 
 </body>

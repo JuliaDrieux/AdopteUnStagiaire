@@ -440,6 +440,10 @@ main button {  /*Tous les boutons dans le main*/
   text-align: center;
 }
 
+#image_user_account {
+  width: 7rem;
+}
+
 /*-------------------------Footer-------------------------*/
 footer {  /*Tout le footer*/
   background-color: rgba(23, 40, 63, 0.98);

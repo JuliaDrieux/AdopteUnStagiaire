@@ -20,6 +20,10 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?>
 
+    <main id="Omain">
+    <div id="main">  
+        <h2>My Internships</h2>
+        <p>You can see your Internships and your Wishlist here !</p>   
     <div class ="container">
         <?php foreach($wishlist as $wishlist){ ?>
             <div class="element"><?= $wishlist['name'] ?></div>
@@ -31,7 +35,8 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
             <div class="element"><?= $wishlist['email'] ?></div>
         <?php } ?>
     </div>  
-
+    </div>
+    </main>
     <?php include('footer.php');?>  
 </body>
 

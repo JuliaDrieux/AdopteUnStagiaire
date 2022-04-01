@@ -20,17 +20,23 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?> 
 
-    <strong>Directory</strong><br><br>
+    <main id="Omain">
+    <div id="main">
+    <h2>Directory</h2>
+    <p>You can search the people account here !</p>
 
-    <div>
+    <div class="element">
+        <form>
         <input type="text" id="research_person" name="research_person">
         <button type="search">Search</button><br><br>
+        </form>
     </div><br>
 
-    <div>
-    <a href="http://adopteunstagiaire.com/" target="_self"><button>Back to home page</button></a>
-    </div>
-
+    <div class="element1">
+                <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
+    </div> 
+    </div> 
+    </main>
     <?php include('footer.php');?> 
 </body>
  

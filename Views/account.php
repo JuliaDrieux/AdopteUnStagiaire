@@ -20,7 +20,9 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?>
 
-        <strong>My Account</strong>
+    <main id="Omain">
+        <div id="main">
+        <h2>My Account</h2>
 
         <img id="image_user_account" src="http://cdn.adopteunstagiaire.com/images/BlackUser.png">
 
@@ -44,7 +46,11 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
         </div>
         
         <a href="http://adopteunstagiaire.com/signOut"><button>Sign out</button></a>
-        <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
+        <div class="element1">
+            <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
+        </div>    
+        </div>
+    </main>
 
     <?php include('footer.php');?>  
 </body>
