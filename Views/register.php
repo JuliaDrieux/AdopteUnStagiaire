@@ -22,7 +22,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 
     <main id="Omain">
         <div id="main">
-            <h2>Add Person</h2>
+            <h2>Add a user</h2>
 
             <p>Find the internship that best suits your interests by selecting among various mission categories.</p>
 

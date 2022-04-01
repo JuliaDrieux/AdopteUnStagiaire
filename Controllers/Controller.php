@@ -97,6 +97,14 @@ $router->get('/wishlist', function($request, $repo) {
   $title = 'Adopte Un Stagiaire | Wishlist';
   $wishlist = $repo->getWishlist();
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/wishlist.php';
+  
+});
+
+//Reviews
+$router->get('/reviews', function($request) {
+
+  $title = 'Adopte Un Stagiaire | My reviews';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/reviews.php';
 });
 
 //Account
