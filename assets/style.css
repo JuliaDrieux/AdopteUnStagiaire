@@ -9,10 +9,15 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   font-family: /*Rubik,*/ Verdana, "Comic Sans MS", Arial, sans-serif;
   line-height: normal;
   flex-direction: row;
+  text-align: left;
 }
 
 a {  /*Tous les liens de la page*/
@@ -23,6 +28,7 @@ q::before, q::after {  /*Toutes les guillemets des citations de la page*/
   content: none;
 }
 
+
 /*-------------------------Header-------------------------*/
 header {
   display: flex;
@@ -32,13 +38,22 @@ header {
   background-position: top left;
   background-attachment: scroll;
   background-repeat: no-repeat;
-  margin-bottom: 1.25rem;
+}
+
+#headerFull {
+  padding-bottom: 5rem;
+}
+
+#headerNFull {
+  padding-bottom: 0rem;
+  position: sticky;
+  top: 0;
 }
 
 /*-----------------Flexbox nav-----------------*/
 #nav{
   width: 100%;
-  height: 5.4375rem;
+  height: 5.261875rem;
   padding-top: 1,4375rem;
   padding-bottom: 1,4375rem;
   padding-left: 2.0625rem;
@@ -47,51 +62,53 @@ header {
 
 nav .element {
   width: 50%;
-  height: 5.4375rem;
+  height: 5.261875remrem;
   display: flex;
 }
 
+nav .element:nth-child(1) {
+  width: 20rem;  
+  min-width: 20rem;
+}
+
 nav .element:nth-child(2) {
+  width: 100%;
   justify-content: flex-end;
   align-items: center;
 }
 
 nav .element1 {
-  width: 7rem;
-  margin-right: 0.6rem;
-  margin-left: 0.6rem;
+  margin-left: 1.1875rem;
   display: flex;
-  justify-content: space-evenly;
 }
 
 nav .element1:nth-child(1) {
-  width: 3.375rem;
+  width: 3.97375rem;
 }
 
 nav .element1:nth-child(2) {
-  width: 3.4375rem;
+  width: 4.181875rem;
 }
 
 nav .element1:nth-child(3) {
-  width: 6.375rem;
+  width: 7.238125rem;
 }
 
 nav .element1:nth-child(4) {
-  width: 6.125rem;
+  width: 7.028125rem;
   margin-right: 2rem;
 }
 
 nav .element1:nth-child(5) {
-  width: 2rem;
+  width: ;
 }
 
 nav .element1:nth-child(6) {
-  width: 2.5625rem;
+  width: ;
   margin-right: 2.5rem;
 }
 
-header nav button {  /*Tous les boutons dans la barre navigation*/
-  width: 7rem;
+header #nav button {  /*Tous les boutons dans la barre navigation*/
   height: 2.5rem;
   padding: 0.125rem;
   border-color: transparent;
@@ -100,14 +117,97 @@ header nav button {  /*Tous les boutons dans la barre navigation*/
   font-weight: bold;
   color: #fafafa;
   text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+
+/*-----------------Side bar-----------------*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #343434;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 3.75rem;
+}
+
+.sidebar a {
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  font-size: 1.3625rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar .SBsmall1 {
+  padding: 1.5rem 0.5rem 0.5rem 2rem;
+  font-size: 1.0625rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar .SBsmall2 {
+  font-size: 1.0625rem;
+}
+
+.sidebar .SBbig {
+  padding: 2rem 0.5rem 0.5rem 2rem;
+  font-size: 1.5625rem;
+  color: #eda2ba;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #F6CEDA;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 1.5625rem;
+  font-size: 2.25rem;
+  margin-right: 3.125rem;
+}
+
+header #nav .openbtn {
+  font-size: 1.25rem;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 0.625rem 0.9375rem;
+  border: none;
+}
+
+header #nav .openbtn:hover {
+  background-color: #444;
+  color: white;
+}
+
+#open {
+  transition: margin-right .5s;
+  padding: 1rem;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 28.125rem) {
+  .sidebar {padding-top: 0.9375rem;}
+  .sidebar a {font-size: 1.125rem;}
+}
+
+
+
+
 
 /*-----------------Flexbox slogan-----------------*/
 #slogan {
   width: 100%;
   height: 38.75rem;
-
-
   display: flex;
 }
 
@@ -117,7 +217,6 @@ header nav button {  /*Tous les boutons dans la barre navigation*/
   align-items: center;  
   font-weight: normal;
   color: #fafafa;
-  text-align: left;
   font-size: 1.25rem;
 }
 
@@ -156,7 +255,7 @@ header q {  /*Le slogan*/
   font-weight: normal;
 }
 
-header button {  /*Tous les autres boutons du header*/
+header # slogan button {
   width: 12.0625rem;
   height: 2.5rem;
   padding: 0.125rem;
@@ -173,6 +272,7 @@ header button {  /*Tous les autres boutons du header*/
 /*-----------------------------------------*/
 #logo {
   width: 20rem;
+  min-width: 20rem;
 }
 
 #image_heart {
@@ -195,6 +295,10 @@ header button {  /*Tous les autres boutons du header*/
   padding: 0.125rem;
 }
 
+header #nav button:hover {
+  color: #eda2ba;
+}
+
 /*-------------------------Main-------------------------*/
 main button {  /*Tous les boutons dans le main*/
   width: 12.0625rem;
@@ -213,53 +317,239 @@ main button {  /*Tous les boutons dans le main*/
   width: 6rem;
 }
 
+#main {
+  width: 100%;
+  min-height: calc(100vh - 5.261875rem - 10.56rem - 1.25rem);
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#Hmain h2 {
+  display: flex;
+  font-size: 2.25rem;
+  justify-content: center;
+  color: #333333;
+}
+
+#Hmain p {
+  display: flex;
+  font-size: 1.25rem;
+  text-align: center;
+  justify-content: center;
+  color: #797979
+}
+
+#Omain h2 {
+  display: flex;
+  font-size: 1.75rem;
+  justify-content: center;
+  color: #333333;
+
+}
+
+#Omain p {
+  display: flex;
+  font-size: 1.125rem;
+  text-align: center;
+  justify-content: center;
+  color: #797979;
+  margin-top: 0.75rem;
+  margin-bottom: 1.4375rem;
+}
+
+#Omain form input {
+  width: 12.0625rem;
+  height: 1.5625rem;
+}
+
+#Omain .element {
+  display: flex;
+  justify-content: center;
+}
+
+#Omain .element1 {
+
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  margin-right: 4rem;
+}
+
+#Omain .element, .element1, .element2, .element3 {
+  display: flex;
+}
+
+#signin {
+  display: flex;
+  width: 100%;
+}
+
+#signin .element {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#signin .element1 {
+  width: 100%;
+  justify-content: center;
+}
+
+#signin .element1:nth-child(2) {
+   margin-top: 0.75rem;
+}
+
+#signin .element1:nth-child(4) {
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  margin-right: 4rem;
+}
+
+#signin .element2 {
+  justify-content: center;
+}
+
+#signin .element2 #mail{
+  margin-top: 1.4375rem;
+}
+
+#signin .element2 #password{
+  margin-top: 1.25rem;
+}
+
+#signin form{
+  width: 100%;
+}
+
+#signin form input {
+  width: 38.74rem;
+  height: 1.5625rem;
+}
+
+#signin form button {
+  width: 38.74rem;
+  height: 2.5rem;
+  margin-top: 1.5625rem;
+  padding: 0.125rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #797979;
+  background-color: #eda2ba;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fafafa;
+  text-align: center;
+}
+
 /*-------------------------Footer-------------------------*/
-body footer {  /*Tout le footer dans body*/
+footer {  /*Tout le footer*/
   background-color: rgba(23, 40, 63, 0.98);
 }
 
 footer span {
   color: #fafafa;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  transition: 0.3s;
+}
+
+footer p {
+  color: #bdbdbd;
+  font-size: 1.125rem;
+  line-height: 2rem;
 }
 
 #foot {
+  width: 100%;
+  height: calc(12.3725 + 8125)rem;
+  margin-top:   ;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+#foot .element {
+  height: calc(12.3725 + 8125)rem;
   display: flex;
 }
 
-.element {
+#foot .element:nth-child(1){
+  width: 13rem;
+  align-items: flex-end;
+  padding-right: 5.4375rem;
+  padding-bottom: 1.5625rem;
+  padding-left: 2.0625rem;
+}
+
+#foot .element:nth-child(2){
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 1.8125rem;
+}
+
+#foot .element1, #foot .element2, #foot .element3 {
   display: flex;
 }
 
-.element1 {
-  display: flex;
+#foot .element1 {
+  width: 100%;
 }
 
-.element2 {
-  display: flex;
+#foot .element1:nth-child(1) {
+  height: 9rem;
+}
+
+#foot .element1:nth-child(2) {
+  height: 3.3725rem;
+}
+
+#foot .element1:nth-child(1) .element2 {
+  flex-direction: column;
+}
+
+#foot .element1:nth-child(1) .element2:nth-child(2) {
+  padding-left: 5.1875rem;
 }
 
 
+#foot .element1:nth-child(2) .element2 {
+  align-items: center; 
+}
 
+#foot .element1:nth-child(2) .element2:nth-child(1) {
+  width: 16.113125rem;
+  min-width: 16.113125rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+}
 
+#foot .element1:nth-child(2) .element2:nth-child(2) {
+  width: 26.47875rem;
+  min-width: 26.47875rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+}
+
+#foot .element2:nth-child(3) {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+#foot .element2:nth-child(3) .element3 {
+  height: 3.3725rem;
+}
+
+#foot .element3 {
+  justify-content: center;
+  align-items: center; 
+}
 
 #image_footer {
   width: 5.5rem;
   height: 3.9375rem;
-}
-
-#about_us_footer {
-  text-align: left;
-}
-
-#contact {
-
-  text-align: left;
-}
-
-#contact_text {
-  height: 1.3125rem;
-  color: #bdbdbd;
-  text-align: left;
 }
 
 #fb {  /*icone facebook*/
@@ -272,6 +562,8 @@ footer span {
   width: 1.75rem;
   height: 1.75rem;
   padding: 0.125rem;
+  margin-right: 1.875rem;
+  margin-left: 1.875rem;
 }
 
 #twitter {  /*icone twitter*/
@@ -282,4 +574,8 @@ footer span {
 
 footer a:visited {  /*Tous les liens déjà visités du footer*/
   color: purple;
+}
+
+footer a span:hover {  /*Tous les liens déjà visités du footer*/
+  color: #eda2ba;
 }

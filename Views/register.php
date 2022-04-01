@@ -20,38 +20,43 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?>
 
-    <strong>Sign In</strong><br><br>
+    <main id="Omain">
+        <div id="main">
+            <h2>Add Person</h2>
 
-    Find the internship that best suits your interests by selecting among various mission categories.<br><br>
+            <p>Find the internship that best suits your interests by selecting among various mission categories.</p>
 
-
-    <form action="/register" method="post">
-        <div>
-            <input placeholder="Name" type="name" id="name" name="user_name">
-        </div><br>
-        <div>
-            <input placeholder="Surname" type="surname" id="surname" name="user_surname">
-        </div><br>
-        <div>
-            <input placeholder="Campus" type="campus" id="campus" name="user_campus">
-        </div><br>
-        <div>
-            <input placeholder="Email" type="email" id="mail" name="user_mail">
-        </div><br>
-        <div>
-                <input placeholder="Password" type="password" id="password" name="user_password">
-        </div><br>
-        <div>
-                <input placeholder="Confirm password" type="password" id="confirm_password" name="user_confirm_password">
-        </div><br>
-        <?php if(isset($error)) {?>
-            <div><?= $error?></div>
-        <?php } ?>
-        <button type="submit">Register</button>
-    
-    </form>
-
-    <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
+            <div class="element">
+                <form action="/register" method="post">
+                    <div>
+                        <input placeholder="Name" type="name" id="name" name="user_name">
+                    </div><br>
+                    <div>
+                        <input placeholder="Surname" type="surname" id="surname" name="user_surname">
+                    </div><br>
+                    <div>
+                        <input placeholder="Campus" type="campus" id="campus" name="user_campus">
+                    </div><br>
+                    <div>
+                        <input placeholder="Email" type="email" id="mail" name="user_mail">
+                    </div><br>
+                    <div>
+                            <input placeholder="Password" type="password" id="password" name="user_password">
+                    </div><br>
+                    <div>
+                            <input placeholder="Confirm password" type="password" id="confirm_password" name="user_confirm_password">
+                    </div><br>
+                    <?php if(isset($error)) {?>
+                        <div><?= $error?></div>
+                    <?php } ?>
+                    <button type="submit">Register</button>
+                </form>
+            </div>    
+            <div class="element1">
+                <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
+            </div>    
+        </div>    
+    </main>
 
     <?php include('footer.php');?>  
 </body>

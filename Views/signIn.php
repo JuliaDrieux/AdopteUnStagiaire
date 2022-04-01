@@ -20,27 +20,43 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?>
 
-    <strong>Sign In</strong><br><br>
-
-    Find the internship that best suits your interests by selecting among various mission categories.<br><br>
-
-
-    <form action="/signIn" method="post">
-        <div>
-            
-            <input placeholder="Email" type="email" id="mail" name="user_mail">
-        </div><br>
-        <div>
-                <input placeholder="Password" type="password" id="password" name="user_password">
-        </div><br>
-        <?php if(isset($error)) {?>
-            <div><?= $error?></div>
-        <?php } ?>
-        <button type="submit">Log In</button><br><br>
-
-    </form>
-
-    <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
+    <main id="Omain">
+        <div id="main">
+            <div id="signin">
+                <div class="element">
+                    <div class="element1">
+                        <h2>Sign In</h2>
+                    </div>    
+                    <div class="element1">
+                        <p>
+                            Find the internship that best suits your interests by selecting among<br>various mission categories.
+                        <p>
+                    </div>
+                    <div class="element1">
+                        <form action="/signIn" method="post">
+                            <div class="element2">
+                                <input placeholder="Email" type="email" id="mail" name="user_mail">
+                            </div>
+                            <div class="element2">
+                                <input placeholder="Password" type="password" id="password" name="user_password">
+                            </div>
+                            <div class="element2">
+                            <?php if(isset($error)) {?>
+                                
+                                    <?= $error?>
+                                
+                            <?php } ?>
+                            <button type="submit">Log In</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="element1">
+                        <a href="http://adopteunstagiaire.com/" target="_self"><button>Back to home page</button></a>
+                    </div>
+                </div>
+            </div>         
+        </div>
+    </main>
 
     <?php include('footer.php');?>  
 </body>
