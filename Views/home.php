@@ -70,7 +70,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 						  <a href="http://adopteunstagiaire.com/addCompany">Add Company</a>
 						  <a href="http://adopteunstagiaire.com/addOffer">Add Offer</a>
 						  <a href="http://adopteunstagiaire.com/register">Add User</a>
-						  <a href="http://adopteunstagiaire.com/addDirectory">Add Directory</a>
+						  <a href="http://adopteunstagiaire.com/directory">Access Directory</a>
 						  <a class="SBsmall1" href="javascript:void(0)" class="closebtn" onclick="closeNav()">Minimize the menu</a>
 						  <a class="SBsmall2" href="#">Logout</a>
 						</div>

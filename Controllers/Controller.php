@@ -107,6 +107,13 @@ $router->get('/reviews', function($request) {
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/reviews.php';
 });
 
+//Directory
+$router->get('/directory', function($request) {
+
+  $title = 'Adopte Un Stagiaire | Directory';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/directory.php';
+});
+
 //Account
 $router->get('/account', function($request, $repo, $authenticator) {
   //if user is connected
