@@ -214,14 +214,10 @@ class Repository{
 
     }
 
+    
     public function getWishlist(){
         
-        $query = "SELECT name, category, publicationDate, duration, availablePositions, salary, email FROM ".env('DB_WISHLIST_TABLE')." JOIN offer ON save.id = offer.id JOIN company ON id_Company = company.id";
-
-       // SELECT name, category, publicationDate, duration, availablePositions, salary, email FROM save 
-        //JOIN offer ON save.id = offer.id
-       // JOIN company ON id_Company = company.id
- 
+        $query = "SELECT name, category, publicationDate, duration, availablePositions, salary, email FROM ".env('DB_WISHLIST_TABLE')." JOIN offer ON save.id = offer.id JOIN company ON id_Company = company.id WHERE id_User = 5";
 
         //Prepare the query
         if($this->conn == null){

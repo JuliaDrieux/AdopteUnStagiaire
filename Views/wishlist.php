@@ -20,7 +20,17 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?>
 
-    
+    <div class ="container">
+        <?php foreach($wishlist as $wishlist){ ?>
+            <div class="element"><?= $wishlist['name'] ?></div>
+            <div class="element"><?= $wishlist['category'] ?></div>
+            <div class="element"><?= $wishlist['publicationDate'] ?></div>
+            <div class="element"><?= $wishlist['duration'] ?></div>
+            <div class="element"><?= $wishlist['availablePositions'] ?></div>
+            <div class="element"><?= $wishlist['salary'] ?></div>
+            <div class="element"><?= $wishlist['email'] ?></div>
+        <?php } ?>
+    </div>  
 
     <?php include('footer.php');?>  
 </body>
