@@ -41,14 +41,14 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 				<div id="mySidebar" class="sidebar">
 				  	<p class="SBbig">My Informations</p> 		
 				  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">❮</a>
-					<a href="http://adopteunstagiaire.com/Account">My Account</a>
-				  	<a href="http://adopteunstagiaire.com/myInternships">My Internships</a>
-				  	<a href="http://adopteunstagiaire.com/myViews">My Views</a>
+					<a href="http://adopteunstagiaire.com/account">My Account</a>
+				  	<a href="http://adopteunstagiaire.com/wishlist">My Internships</a>
+				  	<a href="http://adopteunstagiaire.com/reviews">My Reviews</a>
 					<p class="SBbig">Configuration</p>
 				  	<a href="http://adopteunstagiaire.com/addCompany">Add Company</a>
 				  	<a href="http://adopteunstagiaire.com/addOffer">Add Offer</a>
-				  	<a href="http://adopteunstagiaire.com/register">Add Person</a>
-					<a href="http://adopteunstagiaire.com/addDirectory">Add Directory</a>
+				  	<a href="http://adopteunstagiaire.com/register">Add User</a>
+					<a href="http://adopteunstagiaire.com/directory">Acsess Directory</a>
 				  	<a class="SBsmall1" href="javascript:void(0)" class="closebtn" onclick="closeNav()">Minimize the menu</a>
 				  	<a class="SBsmall2" href="#">Logout</a>
 					</div>

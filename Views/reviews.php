@@ -20,16 +20,8 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?> 
 
-    <strong>Directory</strong><br><br>
+    <strong>My reviews</strong><br><br>
 
-    <div>
-        <input type="text" id="research_person" name="research_person">
-        <button type="search">Search</button><br><br>
-    </div><br>
-
-    <div>
-    <a href="http://adopteunstagiaire.com/" target="_self"><button>Back to home page</button></a>
-    </div>
 
     <?php include('footer.php');?> 
 </body>
