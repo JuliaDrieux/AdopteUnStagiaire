@@ -24,7 +24,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
         <div id="main">
             <h2>Add Person</h2>
 
-            <p>Find the internship that best suits your interests by selecting among various mission categories.</p>
+            <p>You can add people here !</p>
 
             <div class="element">
                 <form action="/register" method="post">
@@ -41,10 +41,10 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
                         <input placeholder="Email" type="email" id="mail" name="user_mail">
                     </div><br>
                     <div>
-                            <input placeholder="Password" type="password" id="password" name="user_password">
+                         <input placeholder="Password" type="password" id="password" name="user_password">
                     </div><br>
                     <div>
-                            <input placeholder="Confirm password" type="password" id="confirm_password" name="user_confirm_password">
+                        <input placeholder="Confirm password" type="password" id="confirm_password" name="user_confirm_password">
                     </div><br>
                     <?php if(isset($error)) {?>
                         <div><?= $error?></div>

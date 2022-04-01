@@ -255,7 +255,7 @@ header q {  /*Le slogan*/
   font-weight: normal;
 }
 
-header # slogan button {
+header #slogan button {
   width: 12.0625rem;
   height: 2.5rem;
   padding: 0.125rem;
@@ -369,7 +369,6 @@ main button {  /*Tous les boutons dans le main*/
 }
 
 #Omain .element1 {
-
   display: flex;
   justify-content: flex-end;
   margin-top: 1.5rem;

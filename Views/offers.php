@@ -21,8 +21,6 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     
     <h1>offers</h1>
 
-    <a href="http://adopteunstagiaire.com/addOffer" target="_self"><button>Add an offer</button></a>
-
     <div class ="container">
         <?php foreach($offers as $offer){ ?>
             <div class="element"><?= $offer['publicationDate'] ?></div>

@@ -21,8 +21,6 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
     
     <h1>Companies</h1>
 
-    <a href="http://adopteunstagiaire.com/addCompany" target="_self"><button>Add a company</button></a>
-
     <div class ="container">
         <?php foreach($companies as $company){ ?>
             <div class="element"><?= $company['name'] ?></div>
