@@ -43,7 +43,7 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
             3)<br>
         </div>
         
-        <a href="http://adopteunstagiaire.com/signout"><button>Sign out</button></a>
+        <a href="http://adopteunstagiaire.com/signOut"><button>Sign out</button></a>
         <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
 
     <?php include('footer.php');?>  

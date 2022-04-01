@@ -19,45 +19,28 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
 <body>
     <?php include('header.php');?>
     
-        <strong>Add Company</strong><br><br>
+        <strong>Add a company</strong><br><br>
 
+        <form action="/addCompany" method="post">
         <div>
-                <label for="company_name">Company Name</label><br>
-                <input type="texte" id="company" name="company_name">
-        </div><br>
-
-        <label for="activity_sector">Activity Sector</label><br>
-        <select name="activity_sector" id="activity_sector">
-        <option value="Network">Network</option>
-        <option value="web">Web</option>
-        <option value="cyber_security">CyberSecurity</option>
-        <option value="developement">Developement</option>
-        </select><br><br>
-
-
-        <div>
-                <label for="company_name">Passed number of CESI trainees</label><br>
-                <input type="number" id="trainees_passed_number" name="trainees_passed_number">
+            <input placeholder="Name" id="name" name="company_name">
         </div><br>
         <div>
-                <label for="locality">Locality</label><br>
-                <input type="text" id="locality" name="locality">
+            <input placeholder="Business sector" id="businessSector" name="company_businessSector">
         </div><br>
+        <div>
+            <input placeholder="Trainees recruited" type="number" id="traineesRecruited" name="company_traineesRecruited">
+        </div><br>
+        <?php if(isset($error)) {?>
+            <div><?= $error?></div>
+        <?php } ?>
+        <button type="submit">Create</button>
+    
+    </form>
 
-        <div>
-                <label for="postcode">Postcode</label><br>
-                <input type="text" id="postcode" name="postcode">
-        </div><br>
-        <div>
-                <label for="pilot_confidence">Pilot confidence</label><br>
-                <input type="text" id="name" name="name">
-        </div><br>
-        
-        <button type="register">Register</button><br><br>
-
-        <div>
-                        <label for="view">View (optional)</label><br>
-                        <input type="radio" id="star5" name="rate" value="5" />
+        <div><br>
+        <label for="rating">Rating (optional)</label><br>
+        <input type="radio" id="star5" name="rate" value="5" />
         <label for="star5" title="text">5 stars</label>
         <input type="radio" id="star4" name="rate" value="4" />
         <label for="star4" title="text">4 stars</label>
@@ -67,18 +50,13 @@ if(__FILE__ == $_SERVER['SCRIPT_FILENAME']){
         <label for="star2" title="text">2 stars</label>
         <input type="radio" id="star1" name="rate" value="1" />
         <label for="star1" title="text">1 star</label><br>
-                        <input type="texte" id="view_texte" name="view_texte">
-
-        </div><br>
-
-        <div>
-                <input type="text" id="research_company" name="research_company">
-                <button type="search">Search</button><br><br>
+                        <input type="text" id="rating_text" name="rating_text">
         </div><br>
 
         <a href="http://adopteunstagiaire.com" target="_self"><button>Back to home page</button></a>
     
     <?php include('footer.php');?>
+
 </body>
   
 </html>

@@ -38,16 +38,50 @@ $router->get('/offers', function($request, $repo) {
 
 //Add offer
 $router->get('/addOffer', function($request) {
-
+  
   $title = 'Adopte Un Stagiaire | Add an offer';
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/addOffer.php';
 });
 
-//Companies
-$router->get('/addCompany', function($request) {
+$router->post('/addOffer', function($request, $repo) {
+  
+  $error = $repo->addOffer($request->getBody());
+  if($error){
+    $title = 'Adopte Un Stagiaire | Add an offer';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/views/addOffer.php';
+  }else{
+    //Redirect
+    header("Location: /");
+    die();
+  }
+});
+
+//All companies
+$router->get('/companies', function($request, $repo) {
 
   $title = 'Adopte Un Stagiaire | Companies';
+  $companies = $repo->getCompanies();
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/companies.php';
+});
+
+//Add a company
+$router->get('/addCompany', function($request) {
+
+  $title = 'Adopte Un Stagiaire | Add a company';
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/addCompany.php';
+});
+
+$router->post('/addCompany', function($request, $repo) {
+  
+  $error = $repo->addCompany($request->getBody());
+  if($error){
+    $title = 'Adopte Un Stagiaire | Add a company';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/views/addCompany.php';
+  }else{
+    //Redirect
+    header("Location: /");
+    die();
+  }
 });
 
 //Mobile app
@@ -55,6 +89,14 @@ $router->get('/mobileApp', function($request) {
 
   $title = 'Adopte Un Stagiaire | Mobile App';
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/mobileApp.php';
+});
+
+//Wishlist
+$router->get('/wishlist', function($request, $repo) {
+
+  $title = 'Adopte Un Stagiaire | Wishlist';
+  $wishlist = $repo->getWishlist();
+  include_once $_SERVER['DOCUMENT_ROOT'].'/views/wishlist.php';
 });
 
 //Account
@@ -68,12 +110,12 @@ $router->get('/account', function($request, $repo, $authenticator) {
     include_once $_SERVER['DOCUMENT_ROOT'].'/views/account.php';
   } else {
     //redirect to signin route
-    header('Location: signin');
+    header('Location: signIn');
   }
 });
 
 //Get log in page
-$router->get("/signout", function($request){
+$router->get("/signOut", function($request){
   if(isset($_COOKIE['token'])){
     unset($_COOKIE['token']);
     setcookie('token', null, -1, '/');
@@ -84,13 +126,13 @@ $router->get("/signout", function($request){
 });
 
 //Get log in page
-$router->get("/signin", function($request){
+$router->get("/signIn", function($request){
   $title = 'Adopte Un Stagiaire | Sign In';
   include_once $_SERVER['DOCUMENT_ROOT'].'/views/signIn.php';
 });
 
 //Login handler
-$router->post('/signin', function($request, $repo, $authenticator) {
+$router->post('/signIn', function($request, $repo, $authenticator) {
   //Password check
   if($authenticator->signIn($request->getBody()['user_mail'], $request->getBody()['user_password'])){
 
@@ -102,6 +144,7 @@ $router->post('/signin', function($request, $repo, $authenticator) {
     die();
 
   }else{
+    $title = 'Adopte Un Stagiaire | Sign In';
     $error="Wrong credentials";
     include_once $_SERVER['DOCUMENT_ROOT'].'/views/signIn.php';
   }
